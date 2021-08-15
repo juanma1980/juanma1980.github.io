@@ -1,3 +1,7 @@
 Compile kodi19.2 on slackarm-current
 
 cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_PREFIX_PATH=/opt/vc -DENABLE_INTERNAL_CROSSGUID=ON -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCORE_SYSTEM_NAME=linux -DCORE_PLATFORM_NAME=gbm -DWITH_CPU=cortex-a53 -DMARIADBCLIENT_INCLUDE_DIR=/usr/local/mysql/include/ -DNFS_ENABLED=0 -DCMAKE_C_FLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard" -DCMAKE_CXX_FLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard"
+
+Kodi 19.1
+
+cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_PREFIX_PATH=/opt/vc -DENABLE_INTERNAL_CROSSGUID=ON -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCORE_SYSTEM_NAME=linux -DCORE_PLATFORM_NAME=gbm -DWITH_CPU=cortex-a53 -DMARIADBCLIENT_INCLUDE_DIR=/usr/local/mysql/include/ -DAPP_RENDER_SYSTEM=gles -DCMAKE_C_FLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard" -DCMAKE_CXX_FLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard"
