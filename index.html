@@ -4,6 +4,10 @@ cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_PREFIX_PATH=/opt/vc -DENABLE_INTE
 </p>
 <p>
 Kodi 19.1
-
+  
+export PATH="$PATH:/opt/jre/bin"
+CFLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard"
+CXXFLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard"  
+export JDK_JAVA_OPTIONS="--add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.io=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED --add-opens java.base/java.util.regex=ALL-UNNAMED --add-opens java.base/java.net=ALL-UNNAMED"
 cmake ../ -DCMAKE_INSTALL_PREFIX=/usr/ -DCMAKE_PREFIX_PATH=/opt/vc -DENABLE_INTERNAL_CROSSGUID=ON -DENABLE_INTERNAL_FLATBUFFERS=ON -DENABLE_INTERNAL_FMT=ON -DCORE_SYSTEM_NAME=linux -DCORE_PLATFORM_NAME=gbm -DWITH_CPU=cortex-a53 -DMARIADBCLIENT_INCLUDE_DIR=/usr/local/mysql/include/ -DAPP_RENDER_SYSTEM=gles -DCMAKE_C_FLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard" -DCMAKE_CXX_FLAGS="-march=armv8-a+crc -mtune=cortex-a53 -mfpu=neon-fp-armv8 -mvectorize-with-neon-quad -mfloat-abi=hard"
 </p>
